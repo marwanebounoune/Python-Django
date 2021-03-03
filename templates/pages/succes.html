@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Formulaire</title>
+</head>
+<body>
+    <h1>Formulaire</h1>
+    <form method="POST" action="{% url 'succes' %}">
+        
+        <table style="text-align: center" >
+            <tr style="border: 1px solid black">
+                <td style="border: 1px solid black">id</td>
+                <td style="border: 1px solid black">id</td>
+                <td style="border: 1px solid black">id</td>
+            </tr>
+            {% for cl in clients %}
+            <tr>
+                <td style="border: 1px solid black">{{cl.id}}</td>
+                <td style="border: 1px solid black">{{cl.nom}}</td>
+                <td style="border: 1px solid black">{{cl.prenom}}</td>
+                <br/>
+            </tr>
+            {% endfor %}
+        </table>
+    </form>
+</body>
